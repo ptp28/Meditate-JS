@@ -5,11 +5,11 @@
 </head>
 <body>
 
-<video autoplay muted loop class="BackgroundVideo" id="videoPlayer">
+<video muted loop class="BackgroundVideo" id="videoPlayer">
   <source src="./video/rain.mp4" type="video/mp4">
   Your browser does not support HTML5 video.
 </video>
-<audio autoplay loop>
+<audio loop id="audioPlayer">
   <source src="./sounds/rain.mp3" type="audio/mpeg">
 </audio>
 
@@ -26,25 +26,25 @@
       <table cellspacing=20 cellpadding=20 class="timeTable">
         <tr>
           <td>
-            <button class="timeSelect">5 Minutes</button>
+            <button class="timeSelect" onclick="setMinutes(5);">5 Minutes</button>
             <br>
           </td>
         </tr>
         <tr>
           <td>
-            <button class="timeSelect">10 Minutes</button>
+            <button class="timeSelect" onclick="setMinutes(10);">10 Minutes</button>
             <br>
           </td>
         </tr>
         <tr>
           <td>
-            <button class="timeSelect">15 Minutes</button>
+            <button class="timeSelect" onclick="setMinutes(15);">15 Minutes</button>
             <br>
           </td>
         </tr>
         <tr>
           <td>
-            <button class="timeSelect">30 Minutes</button>
+            <button class="timeSelect" onclick="setMinutes(30);">30 Minutes</button>
             <br>
           </td>
         </tr>
@@ -61,7 +61,7 @@
           </tr>
         <tr>
           <td>
-            <center><button class="themeButton" id="playButton" value="Pause" onclick="myFunction();"><img src="./svg/play.svg" alt=""></button></center>
+            <center><button class="themeButton" id="playButton" value="Pause" onclick="startTimer();"><img id="buttonState" src="./svg/play.svg" alt=""></img></button></center>
           </td>
         </tr>
       </table>
