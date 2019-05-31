@@ -6,6 +6,7 @@ body {
   margin: 0;
   font-family: Arial;
   font-size: 17px;
+  zoom: 60%;
 }
 
 .column {
@@ -90,7 +91,7 @@ body {
 }
 
 .themeButton {
-  border: none;
+  border: white solid;
   color: white;
   padding: 30px;
   text-align: center;

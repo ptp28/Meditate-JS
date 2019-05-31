@@ -61,7 +61,7 @@
           </tr>
         <tr>
           <td>
-            <center><button class="themeButton" id="playButton" value="Pause" onclick="startTimer();"><img id="buttonState" src="./svg/play.svg" alt=""></img></button></center>
+            <center><button style="background-color: rgba(0, 0, 0, 0.0);" class="themeButton" id="playButton" value="Pause" onclick="startTimer();"><img id="buttonState" src="./images/play.svg" alt=""></img></button></center>
           </td>
         </tr>
       </table>
@@ -72,12 +72,17 @@
       <table cellspacing=50 cellpadding=50 align="right">
         <tr>
           <td>
-            <button class="themeButton" style="background-color: #4972a1;"><img src="./svg/rain.svg" alt=""></button>
+            <button class="themeButton" style="background-image: radial-gradient(#90caf9,#2196f3,#0d47a1);" onclick="changeTheme(1);"><img src="./images/rain.svg" alt=""></button>
           </td>
         </tr>
         <tr>
           <td>
-            <button class="themeButton" style="background-color: #a14f49;"><img src="./svg/beach.svg" alt=""></button>
+            <button class="themeButton" style="background-image: radial-gradient(#fff59d,#ffeb3b,#f57f17); " onclick="changeTheme(2);"><img src="./images/beach.svg" alt=""></button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button class="themeButton" style="background-image: radial-gradient(#a5d6a7,#4caf50,#1b5e20);" onclick="changeTheme(3);"><img src="./images/plant.png" alt=""></button>
           </td>
         </tr>
       </table>
