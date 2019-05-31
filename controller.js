@@ -25,6 +25,12 @@ function startTimer() {
 
 function setMinutes(timerValue)
 {
+  if(!video.paused)
+  {
+    video.pause();
+    audio.pause();
+    stopCountdown();
+  }
   minutes = timerValue;
   seconds = minutes * 60;
   timeString.minutes = minutes;
