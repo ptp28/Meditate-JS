@@ -1,5 +1,6 @@
 var video = document.getElementById("videoPlayer");
 var audio = document.getElementById("audioPlayer");
+var audio2 = document.getElementById("audioPlayerSecondary");
 var button = document.getElementById("playButton");
 var buttonImage = document.getElementById("buttonState");
 var minutes = 1;
@@ -27,7 +28,7 @@ function setMinutes(timerValue)
   minutes = timerValue;
   seconds = minutes * 60;
   timeString.minutes = minutes;
-  timeString.seconds = 0;
+  timeString.seconds = '0'+0;
   displayTime();
 }
 
@@ -49,7 +50,10 @@ function decrementCounter()
 {
   if(seconds <= 0)
   {
-    alert("TIME UP");
+    video.pause();
+    audio.pause(); 
+    alert("You are ready to face the world !!!");
+    window.setTimeout(setMinutes(1),20);
     timeString.minutes = 00;
     timeString.seconds = 01;
     seconds = 1;
@@ -63,8 +67,18 @@ function decrementCounter()
     timeString.seconds = 60;
     timeString.minutes--;
   }
+
   timeString.seconds--;
   seconds--;
+
+  if(timeString.minutes < 10)
+  {
+    timeString.minutes = '0' + timeString.minutes;
+  }
+  if(timeString.seconds < 10)
+  {
+    timeString.seconds = '0' + timeString.seconds;
+  }
 
   displayTime();
 }
@@ -90,6 +104,10 @@ function changeTheme(themeNumber)
       case 2:
       video.src = "./video/beach.mp4";
       audio.src = "./sounds/beach.mp3";
+      break;
+      case 3:
+      video.src = "./video/forest.mp4";
+      audio.src = "./sounds/forest.mp3";
       break;
     default:
 
